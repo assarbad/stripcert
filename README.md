@@ -1,6 +1,7 @@
 # stripcert
 
 **Purpose:** This utility strips the AuthentiCode (code-signing) signature from a PE binary.
+
 **NB:** Beware that it will strip anything beyond the so-called security directory. That means if an overlay has been added past the signature, it too will get stripped.
 
 This is a small utility which I wrote back in 2007 during my first month in Iceland. I created it with DDKWizard at the time, albeit obviously an older version of DDKWizard.
