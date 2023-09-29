@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A3CF337A-BE13-AC38-44FA-99930F43A09A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5FFC38D4-B10A-E517-EA73-2F1AF8BE7BA1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Scripts">
+      <UniqueIdentifier>{3104E6A5-3E1D-EECB-5691-AE52802C7D77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Special Files">
+      <UniqueIdentifier>{5C8B8A33-C215-C4E1-0728-81958A819DE5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="buildinc.cmd">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include="ddkbldenv.cmd">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include="ddkbuild.cmd">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include="ddkpostbld.cmd">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include="ddkprebld.cmd">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include="README.md" />
+    <None Include="premake4.lua">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include="Directory.Build.props">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include="project.early.props">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include="project.late.props">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include=".editorconfig">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include=".clang-format">
+      <Filter>Special Files</Filter>
+    </None>
+    <None Include=".gitignore">
+      <Filter>Special Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="buildnumber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exeversion.h">
+      <Filter>Resource Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="stripcert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stripcert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="exeversion.rc">
+      <Filter>Resource Scripts</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
