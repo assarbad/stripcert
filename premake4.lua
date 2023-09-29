@@ -40,6 +40,11 @@ solution ("stripcert")
             ".gitignore",
         }
 
+        excludes
+        {
+            "*.vsprops",
+        }
+
         vpaths
         {
             ["Special Files/*"] = { "**.cmd", "premake4.lua", "**.manifest", ".gitignore", "*.props", "*.targets", ".editorconfig", ".clang-format", },
