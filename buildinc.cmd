@@ -9,8 +9,10 @@ for /f "" %%i in ('type "%BUILD%"') do (
   )
 set /a BUILDNR=%BUILDNR%+1
 echo New build number is %BUILDNR% ...
-echo // Automatically created file! > %outfile%
-echo #define _FILE_VERSION_BUILD %BUILDNR% >> %outfile%
-echo. >> %outfile%
+(
+echo // Automatically created file!
+echo #define _FILE_VERSION_BUILD %BUILDNR%
+echo/
+) > %outfile%
 echo %BUILDNR% > %BUILD%
 endlocal

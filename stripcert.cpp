@@ -109,7 +109,7 @@ int __cdecl _tmain(int argc, _TCHAR* argv[])
                 _tprintf(TEXT("The file does not contain anything. File size == %d!\n"), dwFileSize);
                 return -3;
             }
-            _tprintf(TEXT("%s (%d bytes)\n"), FileName, dwFileSize);
+            _tprintf(TEXT("%s (%u bytes)\n"), FileName, dwFileSize);
             if (HANDLE hMapping = CreateFileMapping(hFile, NULL, PAGE_READWRITE, 0, dwFileSize, NULL))
                 __try
                 {
@@ -145,7 +145,7 @@ int __cdecl _tmain(int argc, _TCHAR* argv[])
                             // Remove the directory
                             dwCertSize = nthdr->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_SECURITY].Size;
                             dwCertOffset = nthdr->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_SECURITY].VirtualAddress;
-                            _tprintf(TEXT("Removing reference from security data directory (%8.8X, %d).\n"),
+                            _tprintf(TEXT("Removing reference from security data directory (%8.8X, %u).\n"),
                                      nthdr->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_SECURITY].VirtualAddress,
                                      dwCertSize);
                             nthdr->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_SECURITY].VirtualAddress = 0;
@@ -174,12 +174,12 @@ int __cdecl _tmain(int argc, _TCHAR* argv[])
             {
                 //             LONG li = -1 * LONG(dwCertSize), li2 = 0;
                 LONG li = LONG(dwCertOffset), li2 = 0;
-                _tprintf(TEXT("Now attempting to remove the data (%d Byte) ...\n"), dwFileSize - dwCertOffset);
+                _tprintf(TEXT("Now attempting to remove the data (%u Byte) ...\n"), dwFileSize - dwCertOffset);
                 if (SetFilePointer(hFile, li, &li2, FILE_BEGIN))
                 {
                     if (SetEndOfFile(hFile))
                     {
-                        _tprintf(TEXT("New file size is %d.\n"), dwCertOffset);
+                        _tprintf(TEXT("New file size is %u.\n"), dwCertOffset);
                         _tprintf(TEXT("\nJOB DONE SUCCESSFULLY.\n"));
                     }
                 }

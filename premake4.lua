@@ -26,6 +26,7 @@ solution ("stripcert")
         kind            ("ConsoleApp")
         flags           {"Unicode", "NoPCH", "NoMinimalRebuild", "Symbols",}
         defines         {"WIN32", "_WINDOWS",}
+        prebuildcommands{"call \"$(ProjectDir)buildinc.cmd\"",}
 
         files
         {
